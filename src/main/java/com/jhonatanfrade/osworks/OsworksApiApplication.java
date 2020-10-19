@@ -1,4 +1,4 @@
-package com.jhonatanfrade.osworks.osworksapi;
+package com.jhonatanfrade.osworks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
