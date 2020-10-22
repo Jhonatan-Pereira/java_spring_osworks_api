@@ -1,6 +1,6 @@
 package com.jhonatanfrade.osworks.domain.service;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 import com.jhonatanfrade.osworks.domain.exception.NegocioException;
 import com.jhonatanfrade.osworks.domain.model.Cliente;
@@ -28,7 +28,7 @@ public class GestaoOrdemServicoService {
 
     ordemServico.setCliente(cliente);
     ordemServico.setStatus(StatusOrdemServico.ABERTA);
-    ordemServico.setDataAbertura(LocalDateTime.now());
+    ordemServico.setDataAbertura(OffsetDateTime.now());
 
     return ordemServicoRepository.save(ordemServico);
   }
