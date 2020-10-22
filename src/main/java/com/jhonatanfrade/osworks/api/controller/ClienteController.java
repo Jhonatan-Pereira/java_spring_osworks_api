@@ -3,6 +3,8 @@ package com.jhonatanfrade.osworks.api.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import com.jhonatanfrade.osworks.domain.model.Cliente;
 import com.jhonatanfrade.osworks.domain.repositories.ClienteRepository;
 
@@ -44,7 +46,7 @@ public class ClienteController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public Cliente adicionar(@RequestBody Cliente cliente) {
+  public Cliente adicionar(@Valid @RequestBody Cliente cliente) {
     return clienteRepository.save(cliente);
   }
 
